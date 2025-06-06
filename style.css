@@ -1,1 +1,261 @@
 /* Add your CSS here */
+
+/* Intel-branded hero section */
+header {
+  /* Intel blue gradient background for branding */
+  background: linear-gradient(135deg, #0071c5 70%, #3fa9f5 100%);
+  /* Center all content */
+  text-align: center;
+  /* White text for strong contrast */
+  color: white;
+  /* Padding for space */
+  padding: 18px 0;
+  font-size: 0.95em;
+  /* Soft shadow and rounded corners for style */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* Logo styling */
+header img {
+  /* Make logo a bit smaller */
+  max-width: 90px;
+  margin-bottom: 12px;
+}
+
+/* Headline styling */
+header h1 {
+  /* Large, bold headline */
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subheading styling */
+header p {
+  /* Slightly larger, readable text */
+  font-size: 1em;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Semi-transparent background behind hero content for readability */
+header > div {
+  background: rgba(255, 255, 255, 0.10);
+  padding: 18px 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: inline-block;
+}
+
+/* Add a blue gradient background to the whole page */
+body {
+  /* Use a vertical blue gradient */
+  background: linear-gradient(180deg, #e3f1fb 0%, #b3d8f7 100%);
+  /* Make sure the background covers the whole page */
+  min-height: 100vh;
+  /* Add a little padding for comfort */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation bar styles */
+header nav {
+  /* Space above and below the nav */
+  margin-bottom: 18px;
+  /* Use flexbox to arrange links in a row */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the links horizontally */
+  align-items: center;     /* Align links vertically */
+}
+
+header nav a {
+  /* White text for contrast */
+  color: #fff;
+  /* Remove underline */
+  text-decoration: none;
+  /* Add space between links */
+  margin: 0 14px;
+  /* Make links a bit bigger */
+  font-size: 1.05em;
+  /* Add a little padding for easier clicking */
+  padding: 6px 8px;
+  /* Rounded corners on hover */
+  border-radius: 4px;
+  /* Smooth transition for background */
+  transition: background 0.2s;
+}
+
+/* Highlight link on hover */
+header nav a:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Timeline Section Styles */
+section {
+  /* More compact top margin for a tighter look */
+  margin: 36px 0 40px 0;
+  /* Hide horizontal overflow by default */
+  overflow-x: auto;
+  /* Prevent vertical scroll unless needed */
+  overflow-y: visible;
+  /* Add some padding */
+  padding: 0 0 24px 0; /* Remove top/bottom padding, keep bottom for scroll */
+  /* Use flexbox to arrange timeline cards in a row */
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between cards */
+  /* Allow horizontal scrolling if cards overflow */
+  scroll-behavior: smooth;
+  /* Enable horizontal scroll snap */
+  scroll-snap-type: x mandatory;
+  /* Add smooth scrolling for better experience */
+  scroll-behavior: smooth;
+  /* Add some bottom padding so scrollbars don't overlap cards */
+  padding-bottom: 24px;
+  background: #f5f7fa; /* Light background behind cards for contrast */
+  border-radius: 0 0 16px 16px; /* Rounded bottom corners */
+}
+
+/* Style each timeline card to be larger using flexbox */
+section > div {
+  /* Make cards much wider and taller */
+  min-width: 320px;
+  max-width: 380px;
+  padding: 28px 20px 32px 20px;
+  margin: 22px 0;
+  font-size: 1.08em;
+  /* Give cards a white background */
+  background: #fff;
+  /* Remove border, add shadow */
+  border: none;
+  border-radius: 8px;
+  /* Add a little shadow for depth */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  /* Center text inside cards */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  /* Transition for hover effect */
+  transition: 
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+  /* Make each card a snap point */
+  scroll-snap-align: start;
+  overflow: visible;
+}
+
+/* Add a more engaging hover effect to cards */
+section > div:hover {
+  /* Slightly lift and scale the card */
+  transform: translateY(-8px) scale(1.03);
+  /* Add a brighter, more colorful shadow */
+  box-shadow: 0 8px 24px rgba(0,113,197,0.13), 0 2px 8px rgba(0,0,0,0.08);
+  /* Lighten the card background a bit */
+  background: #f0f8ff;
+}
+
+/* Make timeline images larger to match bigger cards */
+section > div img {
+  max-width: 260px;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  align-self: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+/* Year styling: bold, blue, small */
+section > div h2 {
+  color: #0071c5;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 2px 0;
+  letter-spacing: 1px;
+}
+
+/* Title styling: slightly larger, bold */
+section > div h3 {
+  font-size: 1.05em;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+/* Description: smaller, muted */
+section > div p {
+  font-size: 0.97em;
+  color: #444;
+  margin: 0;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Hide extra info for now (not in screenshot) */
+section > div .extra-info {
+  display: none !important;
+}
+
+/* Hide card details by default, but reserve space to prevent layout shift */
+.card-details {
+  /* Hide text but keep space using visibility and max-height */
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s, max-height 0.2s;
+  margin-top: 0;
+}
+
+/* Show card details on card hover */
+section > div:hover .card-details {
+  visibility: visible;
+  opacity: 1;
+  max-height: 200px; /* Enough space for the text */
+  margin-top: 8px;
+  transition: opacity 0.2s, max-height 0.2s;
+}
+
+/* Remove special margin for Card 9 image so it matches other cards */
+section > div:nth-child(9) img {
+  margin-top: 0;
+  /* Keep other styles consistent */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+/* Center the text at the bottom of the webpage */
+body > p {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1em;
+  color: #222;
+}
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;
+    gap: 18px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    border-radius: 0;
+    background: transparent;
+  }
+  section > div {
+    min-width: 0;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  section > div img {
+    align-self: center;
+  }
+}
